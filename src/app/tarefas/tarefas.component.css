@@ -8,14 +8,14 @@
    border: 1px solid #F20F97;
    border-radius: 10px;
 }
-
+.cor {
+  background: #a17aa1;
+  font-family: "Teko", cursive;
+}
 
 
 .tituloTarefas{
 font-family: 'Teko', cursive;
-font-weight: bold;
-font-size: 50px;
-text-align: center;
 color: #FFC107;
 }
 
