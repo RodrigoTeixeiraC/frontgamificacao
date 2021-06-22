@@ -33,7 +33,7 @@ export class PostQuizComponent implements OnInit {
   constructor(
     private postQuizService: GrupoPostService,
     private router:Router, 
-    private raute:ActivatedRoute,
+    private route:ActivatedRoute,
     private alertas: AlertasService,
     private usuarioService: UsuarioService
   ) { }
@@ -46,7 +46,7 @@ export class PostQuizComponent implements OnInit {
       this.router.navigate(['/login'])
     }
 
-   let id = this.raute.snapshot.params['id']
+   let id = this.route.snapshot.params['id']
    this.findGrupoById(id)
    this.findUsuarioById()   
   }
@@ -83,13 +83,13 @@ botaoInscricao(){
 }
 
   publicar(){
-    
+        
     this.postQuiz.grupoPostQuiz = this.grupo
     this.postQuizService.postPostagemQuiz(this.postQuiz).subscribe((resp: PostagemQuiz)=>{
       this.postQuiz= resp
       this.alertas.showAlertSuccess ("Postagem realizada com sucesso!")
       this.postQuiz = new PostagemQuiz()
-      let id = this.raute.snapshot.params['id']
+      let id = this.route.snapshot.params['id']
       this.findGrupoById(id)
     }) 
     
