@@ -36,7 +36,7 @@ export class TarefasService {
   }
 
   deleteTarefa(id:number){
-    return this.http.delete(`http://localhost:8080/tarefa/${id}`, this.token)
+    return this.http.delete(`https://you-win.herokuapp.com/tarefa/${id}`, this.token)
   }
 
 }
