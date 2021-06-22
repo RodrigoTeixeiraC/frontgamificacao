@@ -24,6 +24,9 @@ export class FeedComponent implements OnInit {
 
   listaPostagens: PostagemQuiz[]
   listaAtividades: Atividades[]
+
+  key = 'data'
+  reverse = true
   
 
   constructor(
